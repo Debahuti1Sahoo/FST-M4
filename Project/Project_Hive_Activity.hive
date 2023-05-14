@@ -1,0 +1,12 @@
+CREATE TABLE EpisodeIV(Name STRING , Line STRING)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t' TBLPROPERTIES("skip.header.line.count" = "2");
+LOAD DATA INPATH '/user/debahuti/inputs/inputs/inputs/episodeIV_dialouges.txt' INTO TABLE EpisodeIV;
+SELECT Name, COUNT(Name) AS no_of_lines FROM EpisodeIV GROUP BY Name ORDER BY no_of_lines DESC;
+CREATE TABLE EpisodeV(Name STRING , Line STRING)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t' TBLPROPERTIES("skip.header.line.count" = "2");
+LOAD DATA INPATH '/user/debahuti/inputs/inputs/inputs/episodeV_dialouges.txt' INTO TABLE EpisodeV;
+SELECT Name, COUNT(Name) AS no_of_lines FROM EpisodeV GROUP BY Name ORDER BY no_of_lines DESC;
+CREATE TABLE EpisodeVI(Name STRING , Line STRING)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t' TBLPROPERTIES("skip.header.line.count" = "2");
+LOAD DATA INPATH '/user/debahuti/inputs/inputs/inputs/episodeIV_dialouges.txt' INTO TABLE EpisodeVI;
+SELECT Name, COUNT(Name) AS no_of_lines FROM EpisodeVI GROUP BY Name ORDER BY no_of_lines DESC;

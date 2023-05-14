@@ -1,0 +1,1 @@
+SELECT * FROM EpisodeDialougues WHERE INSTR(Line,'Luke')>0; 
